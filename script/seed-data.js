@@ -797,23 +797,24 @@ const productData = [
 
 const userData = [
   {
-    firstName: "Kenny",
-    lastName: "Farrent",
-    email: "test",
-    username: "kfarrent0",
+    firstName: "admin",
+    lastName: "admin",
+    email: "admin@admin.com",
+    username: "admin",
     password:
-      "11ba679415558be8b9a0b90008a60e7b2dd6a7a351cae380fc9a1ab9b1f287e9",
+      "a9f7e30386276775dec32b65229e1ac382eb4c765859e2800c94f7035af4ba7e",
     isAdmin: true,
-    salt: "m6cet2/3ZobfZu2NlWyJ7w=="
+    salt: "b8ZHDZQ+ncitYe1V41htsw=="
   },
   {
-    firstName: "Nonie",
-    lastName: "Tyrrell",
-    email: "ntyrrell1@surveymonkey.com",
-    username: "ntyrrell1",
-    password: "78QuVIPAnZqM",
+    firstName: "test",
+    lastName: "test",
+    email: "test@test.com",
+    username: "test",
+    password:
+      "51bd9530816d3678a416378fd972c979287c971702530b874bf6610ad5361437",
     isAdmin: false,
-    salt: "YRVNg7"
+    salt: "SHP03Sou8G4kwqRqz0QaKA=="
   },
   {
     firstName: "Dominga",

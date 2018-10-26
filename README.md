@@ -10,6 +10,15 @@ This project was created by three students at [Fullstack Academy](https://www.fu
 
 https://roboshop.herokuapp.com/
 
+### Login credentials
+
+| Username        | Password |
+| --------------- | -------- |
+| admin@admin.com | admin    |
+| test@test.com   | test     |
+
+These credentials will work with the deployed application and a local install.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development purposes.
