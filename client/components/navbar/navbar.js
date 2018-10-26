@@ -1,20 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import Search from './search'
-import CategoryList from './category-list'
-import {Menu, Button, Icon, Dropdown} from 'semantic-ui-react'
-import {logout} from '../../store'
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import Search from "./search";
+import CategoryList from "./category-list";
+import { Menu, Button, Icon, Dropdown } from "semantic-ui-react";
+import { logout } from "../../store";
 
-export const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
-  <Menu attached="top">
-    <Menu.Item name="home" as={Link} to="/">
-      Home
-    </Menu.Item>
+export const Navbar = ({ handleClick, isLoggedIn, isAdmin }) => (
+  <Menu secondary>
+    <Link to="/">
+      <img
+        src="/images/logo.png"
+        alt="RoboShop logo"
+        height="50px"
+        style={styles.logo}
+      />
+    </Link>
     <CategoryList />
-    <Search />
     <Menu.Menu position="right">
+      <Search />
       {isLoggedIn ? (
         <Menu.Item>
           {isAdmin ? (
@@ -60,7 +65,7 @@ export const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
       )}
       <Menu.Item>
         <Button animated="vertical" as={Link} to="/cart">
-          <Button.Content hidden>My Cart</Button.Content>
+          <Button.Content hidden>Cart</Button.Content>
           <Button.Content visible>
             <Icon name="shop" />
           </Button.Content>
@@ -68,7 +73,14 @@ export const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
       </Menu.Item>
     </Menu.Menu>
   </Menu>
-)
+);
+
+const styles = {
+  logo: {
+    marginTop: "10px",
+    marginLeft: "10px"
+  }
+};
 
 /**
  * CONTAINER
@@ -77,18 +89,18 @@ const mapState = state => {
   return {
     isLoggedIn: !!state.user.id,
     isAdmin: state.user.isAdmin
-  }
-}
+  };
+};
 
 const mapDispatch = dispatch => {
   return {
     handleClick: () => {
-      dispatch(logout())
+      dispatch(logout());
     }
-  }
-}
+  };
+};
 
-export default connect(mapState, mapDispatch)(Navbar)
+export default connect(mapState, mapDispatch)(Navbar);
 
 /**
  * PROP TYPES
@@ -96,4 +108,4 @@ export default connect(mapState, mapDispatch)(Navbar)
 Navbar.propTypes = {
   handleClick: PropTypes.func.isRequired,
   isLoggedIn: PropTypes.bool.isRequired
-}
+};
