@@ -8,7 +8,7 @@ This project was created by three students at [Fullstack Academy](https://www.fu
 
 ## Live Demo
 
-https://roboshop.herokuapp.com/
+https://robot-shop.herokuapp.com/
 
 ### Login credentials
 
