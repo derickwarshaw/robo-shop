@@ -1,4 +1,6 @@
-# RoboShop
+<p align="center">
+  <img src="./public/images/readme-logo.png" alt="RoboShop logo"/>
+</p>
 
 RoboShop is a e-commerce web application featuring a product catalog with search and filtering, a shopping cart and checkout using the [Stripe API](https://stripe.com/docs/api).
 
