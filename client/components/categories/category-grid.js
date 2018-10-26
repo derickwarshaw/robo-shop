@@ -1,13 +1,13 @@
-import React from 'react'
-import {Card} from 'semantic-ui-react'
-import CategoryCard from './category-card'
-import {connect} from 'react-redux'
+import React from "react";
+import { Card } from "semantic-ui-react";
+import CategoryCard from "./category-card";
+import { connect } from "react-redux";
 
 const mapState = state => ({
   categories: state.categories
-})
+});
 
-const CategoryGrid = ({categories}) => {
+const CategoryGrid = ({ categories }) => {
   return (
     <Card.Group itemsPerRow={6}>
       {categories.length > 0 ? (
@@ -21,10 +21,10 @@ const CategoryGrid = ({categories}) => {
         key={-1}
         id={0}
         name="All Products"
-        imageUrl="https://robohash.org/XWS.png?set=set3&size=150x150"
+        imageUrl="/images/all-products.png"
       />
     </Card.Group>
-  )
-}
+  );
+};
 
-export default connect(mapState)(CategoryGrid)
+export default connect(mapState)(CategoryGrid);
