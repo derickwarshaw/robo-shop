@@ -19,6 +19,10 @@ https://roboshop.herokuapp.com/
 
 These credentials will work with the deployed application and a local install.
 
+## Preview
+
+<img src="./public/images/preview.png" alt="RoboShop preview">
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development purposes.
