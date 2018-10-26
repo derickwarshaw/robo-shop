@@ -19,7 +19,7 @@ https://roboshop.herokuapp.com/
 
 These credentials will work with the deployed application and a local install.
 
-## Preview
+### Preview
 
 <img src="./public/images/preview.png" alt="RoboShop preview">
 
