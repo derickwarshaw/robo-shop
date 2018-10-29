@@ -2,10 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Search from "./search";
-import CategoryList from "./category-list";
+import { CategoryList, Search } from "components";
 import { Menu, Button, Icon, Dropdown } from "semantic-ui-react";
-import { logout } from "../../store";
+import { logout } from "store";
+
+const mapState = state => {
+  return {
+    isLoggedIn: !!state.user.id,
+    isAdmin: state.user.isAdmin
+  };
+};
+
+const mapDispatch = dispatch => {
+  return {
+    handleClick: () => {
+      dispatch(logout());
+    }
+  };
+};
 
 export const Navbar = ({ handleClick, isLoggedIn, isAdmin }) => (
   <Menu secondary>
@@ -82,29 +96,8 @@ const styles = {
   }
 };
 
-/**
- * CONTAINER
- */
-const mapState = state => {
-  return {
-    isLoggedIn: !!state.user.id,
-    isAdmin: state.user.isAdmin
-  };
-};
-
-const mapDispatch = dispatch => {
-  return {
-    handleClick: () => {
-      dispatch(logout());
-    }
-  };
-};
-
 export default connect(mapState, mapDispatch)(Navbar);
 
-/**
- * PROP TYPES
- */
 Navbar.propTypes = {
   handleClick: PropTypes.func.isRequired,
   isLoggedIn: PropTypes.bool.isRequired

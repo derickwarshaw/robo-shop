@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
-import CheckoutForm from './checkout-form'
+import React, { Component } from "react";
+import { CheckoutForm } from "components";
 
 class Checkout extends Component {
   render() {
-    return <CheckoutForm />
+    return <CheckoutForm />;
   }
 }
 
-export default Checkout
+export default Checkout;

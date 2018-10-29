@@ -1,15 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {Provider} from 'react-redux'
-import {Router} from 'react-router-dom'
-import history from './history'
-// import store from './store'
-import App from './app'
-import {PersistGate} from 'redux-persist/lib/integration/react'
-import store, {persistor} from './store'
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { Router } from "react-router-dom";
+import history from "./history";
+import App from "./App";
+import { PersistGate } from "redux-persist/lib/integration/react";
+import store, { persistor } from "store";
 
 // establishes socket connection
-import './socket'
+import "./socket";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -19,5 +18,5 @@ ReactDOM.render(
       </Router>
     </PersistGate>
   </Provider>,
-  document.getElementById('app')
-)
+  document.getElementById("app")
+);

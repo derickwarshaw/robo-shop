@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { CategoryGrid } from "./index";
+import { CategoryGrid } from "components";
 import { connect } from "react-redux";
 import { Container, Header, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import { fetchCategories, fetchCart } from "../store";
+import { fetchCategories, fetchCart } from "store";
 
 const mapState = state => ({
   user: state.user,

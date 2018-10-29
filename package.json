@@ -75,6 +75,7 @@
     "axios-mock-adapter": "^1.9.0",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^8.0.0-beta.2",
+    "babel-plugin-module-resolver": "3.1.1",
     "chai": "^3.5.0",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "^1.0.0",
@@ -100,7 +101,24 @@
     "presets": [
       "@babel/react",
       "@babel/env",
-      ["@babel/preset-stage-2", { "decoratorsLegacy": true }]
+      [
+        "@babel/preset-stage-2",
+        {
+          "decoratorsLegacy": true
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": ["./"],
+          "alias": {
+            "store": "./client/store/",
+            "components": "./client/components/"
+          }
+        }
+      ]
     ]
   }
 }
